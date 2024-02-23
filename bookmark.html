@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+</head>
+<style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .todo-container {
+            max-width: 400px;
+            margin: 0 auto;
+        } 
+
+        .todo-item {
+            margin: 15px;
+        }
+
+        .todo-item input[type="button"] {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #todo-count {
+            margin-top: 10px;
+        }
+</style>
+<body>
+    <h1>Bookmark Website</h1>
+    <form id="todo-form" onsubmit="addTodo(event)">
+        <label>Website Title : </label>
+        <input type="text" id="web-title" placeholder="Name" required><br /><br />
+        <label>Website url : </label>
+        <input type="text" id="web-url" placeholder="Name" required><br />
+        <button value="Add to Book">Add</button>
+    </form>
+    <h2>All BookMarks</h2>
+    <div id="web-list">
+        <!-- To-Do items will be added here -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"></script>
+    <script src="bookmark.js"></script>
+</body>
+</html>
